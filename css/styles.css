@@ -39,11 +39,13 @@ ul {
   padding-bottom: 120px;
 }
 
+/* *HEADER */
+
 .head-style {
   border-bottom: 1px solid #e7e9fc;
 }
 
-.nav-style .logo {
+.logo {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 18px;
@@ -52,33 +54,43 @@ ul {
   letter-spacing: 0.03em;
   color: #4d5ae5;
   margin-right: 76px;
+  display: block;
 }
 
-.nav-style .logo .logo-color {
+.logo-color {
   color: #2e2f42;
 }
 
-.nav-style .nav-menu .nav-menu-link {
+.nav-menu-link {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
   display: block;
-  padding: 24px 0;
 }
 
-.nav-style .nav-menu .nav-menu-link:hover,
-.nav-style .nav-menu .nav-menu-link:focus {
+.nav-menu-link:hover,
+.nav-menu-link:focus {
   color: #404bbf;
+}
+
+.nav-menu-link:hover::after,
+.nav-menu-link:focus::after {
+  content: "";
+  display: block;
+  max-width: 100%;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 4px;
 }
 
 .contacts {
   font-style: normal;
+  margin-left: auto;
 }
 
-.contacts .con-style .mail-style {
-
+.mail-style {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
@@ -87,8 +99,8 @@ ul {
   display: block;
 }
 
-.contacts .con-style .mail-style:hover,
-.contacts .con-style .mail-style:focus {
+.mail-style:hover,
+.mail-style:focus {
   color: #404bbf;
 }
 
@@ -100,22 +112,33 @@ ul {
   align-items: center;
 }
 
-.nav-menu,
-.con-style {
-  gap: 40px;
+.head {
+  padding-bottom: 24px;
+  padding-top: 24px;
 }
 
-.nav-menu {
-  margin-right: 332px;
+.nav-menu,
+.con-style {
+  column-gap: 40px;
 }
+
+
+
+/* * /  HEADER*/
+
+/* *   HERO */
 
 .title {
   background-color: #2e2f42;
   padding-bottom: 188px;
   padding-top: 188px;
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/hero/img-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 
-.title .page-title {
+.page-title {
   color: #fff;
   font-weight: 700;
   font-size: 56px;
@@ -127,7 +150,7 @@ ul {
   margin: 0 auto;
 }
 
-.title .button {
+.button {
   background-color: #4d5ae5;
   color: #fff;
   font-family: 'Roboto', sans-serif;
@@ -144,10 +167,15 @@ ul {
   min-width: 169px;
 }
 
-.title .button:hover,
-.title .button:focus {
+.button:hover,
+.button:focus {
   background-color: #404bbf;
 }
+
+/* *  /  HERO */
+
+
+/* *    ADVANTAGES */
 
 .visually-hidden {
   position: absolute;
@@ -162,7 +190,15 @@ ul {
   overflow: hidden;
 }
 
-.advan .advan-title {
+.advan-icon {
+  background-color: #f4f4fd;
+  padding: 24px 100px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.advan-title {
   color: #2e2f42;
   font-weight: 500;
   font-size: 20px;
@@ -171,7 +207,7 @@ ul {
   margin-bottom: 8px;
 }
 
-.advan .advan-text {
+.advan-text {
   color: #434455;
   font-size: 16px;
   font-weight: 400;
@@ -188,11 +224,16 @@ ul {
   width: calc((100% - 3*24px)/4);
 }
 
+/* *  /  ADVANTAGES */
+
+
+/* *    TEAM */
+
 .team {
   background-color: #f4f4fd;
 }
 
-.team .team-title {
+.team-title {
   color: #2e2f42;
   font-weight: 700;
   font-size: 36px;
@@ -203,10 +244,13 @@ ul {
   margin-bottom: 72px;
 }
 
-.team .team-list {
+.team-list {
   background-color: #fff;
   width: calc((100% - 3*24)/4);
   border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .box {
@@ -214,21 +258,10 @@ ul {
 }
 
 .team .advan-title {
-  color: #2e2f42;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
   text-align: center;
-  margin-bottom: 8px;
 }
 
 .team .advan-text {
-  color: #434455;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   text-align: center;
 }
 
@@ -237,8 +270,64 @@ ul {
   gap: 24px;
 }
 
+.team-social {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.team-icon {
+  display: block;
+}
+
+.team-link {
+  fill: #4d5ae5;
+}
+
+.team-link:hover,
+.team-link:focus {
+  fill: #31d0aa;
+}
+
+/* *  /  TEAM */
+
+/* *  PORTFOLIO */
+
 .portfolio-box {
   width: calc((100% - 2*24)/3);
+}
+
+.box-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px 164px 32px;
+}
+
+.portfolio-box:hover .overlay {
+  transform: translateY(0);
+}
+
+.portfolio-box:hover .port-box {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .port-box {
@@ -247,18 +336,7 @@ ul {
   border-top: none;
 }
 
-.portfolio .team-title {
-  color: #2e2f42;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: 72px;
-}
-
-.portfolio .advan-title {
+.advan-title {
   color: #2e2f42;
   font-weight: 500;
   font-size: 20px;
@@ -267,7 +345,7 @@ ul {
   margin-bottom: 8px;
 }
 
-.portfolio .advan-text {
+.advan-text {
   color: #434455;
   font-size: 16px;
   font-weight: 400;
@@ -281,6 +359,10 @@ ul {
   column-gap: 24px;
   row-gap: 48px;
 }
+
+/* *  /  PORTFOLIO */
+
+/* *  FOOTER */
 
 .foot-style {
   background-color: #2e2f42;
@@ -300,7 +382,7 @@ ul {
   display: inline-block;
 }
 
-.foot-style .logo .logo-color {
+.foot-style .logo-color {
   color: #f4f4fd;
 }
 
@@ -312,3 +394,40 @@ ul {
   letter-spacing: 0.02em;
   max-width: 264px;
 }
+
+.foot-container,
+.foot-social-list {
+  display: flex;
+}
+
+.foot-social-list {
+  column-gap: 16px;
+}
+
+.foot-icon {
+  display: block;
+}
+
+.foot-social {
+  margin-left: 120px;
+}
+
+.foot-social-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.foot-social-link {
+  fill: #4d5ae5;
+}
+
+.foot-social-link:hover,
+.foot-social-link:focus {
+  fill: #31d0aa;
+}
+
+/* *  /  FOOTER */

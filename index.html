@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WebStudio</title>
+
+    <!-- !Normalize -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -11,7 +13,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- !STYLES -->
     <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- !FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,6 +27,8 @@
   </head>
 
   <body>
+    <!-- ?  HEADER -->
+
     <header class="head-style">
       <div class="container head">
         <nav class="nav-style">
@@ -29,10 +37,14 @@
           >
           <ul class="nav-menu">
             <li>
-              <a href="./index.html" class="nav-menu-link-first">Studio</a>
+              <a href="./index.html" class="nav-menu-link">Studio</a>
             </li>
-            <li><a href="" class="nav-menu-link">Portfolio</a></li>
-            <li><a href="" class="nav-menu-link">Contacts</a></li>
+            <li>
+              <a href="" class="nav-menu-link">Portfolio</a>
+            </li>
+            <li>
+              <a href="" class="nav-menu-link">Contacts</a>
+            </li>
           </ul>
         </nav>
         <address class="contacts">
@@ -52,13 +64,21 @@
       </div>
     </header>
 
+    <!-- ? / HEADER -->
+
     <main>
+      <!-- ? HERO -->
+
       <section class="title">
         <div class="container hero">
           <h1 class="page-title">Effective Solutions for Your Business</h1>
           <button type="button" class="button">Order Service</button>
         </div>
       </section>
+
+      <!-- ? / HERO -->
+
+      <!-- ? ADVANTAGES -->
 
       <section class="advan section">
         <div class="container">
@@ -115,6 +135,10 @@
           </ul>
         </div>
       </section>
+
+      <!-- ? / ADVANTAGES -->
+
+      <!-- ? TEAM -->
 
       <section class="team section">
         <div class="container">
@@ -292,6 +316,10 @@
         </div>
       </section>
 
+      <!-- ? / TEAM -->
+
+      <!-- ? PORTFOLIO -->
+
       <section class="portfolio section">
         <div class="container">
           <h2 class="team-title">Our Portfolio</h2>
@@ -413,7 +441,11 @@
           </ul>
         </div>
       </section>
+
+      <!-- ? / PORTFOLIO -->
     </main>
+
+    <!-- ? FOOTER -->
 
     <footer class="foot-style">
       <div class="container foot-container">
@@ -461,5 +493,7 @@
         </div>
       </div>
     </footer>
+
+    <!-- ? / FOOTER -->
   </body>
 </html>
